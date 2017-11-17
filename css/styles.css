@@ -1,0 +1,69 @@
+* {
+    font-size: 20px;
+    color: #00aced;
+}
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #00aced, #57e5af);
+}
+
+.input {
+    position: relative;
+    width: 70%;
+}
+
+input {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    height: 120px;
+    width: 100%;
+    font-size: 400%;
+    padding-left: 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: none;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+i {
+    position: absolute;
+    right: 40px;
+    bottom: -10px;
+    font-size: 460%;
+    color: #9a9a9a;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
