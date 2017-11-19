@@ -1,21 +1,22 @@
 $(document).ready(function(){
     
     $('i').click(function() {
-        var search = $('input').val();
-        
-        $.ajax({
-            url: "https://api.twitter.com/1.1/search/tweets.json",
-            data: {
-                q: search
-            },
-            success: function(response){
-                console.log(response);
-            }
-        })
-    });
-    
-    
-    
+      // save search input
+      var searchTerm = $('input').val();
+      
+      $.ajax({
+        type: 'GET',
+        url: "../php/index.php",
+        dataType: 'JSON',
+        data: {
+          searchTerm: searchTerm
+        },
+        success: function(data) {
+          console.log(data);
+        }
+      })
+      
+    })
 });
 
 
