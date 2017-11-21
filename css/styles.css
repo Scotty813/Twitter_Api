@@ -40,6 +40,13 @@ i {
     cursor: pointer;
 }
 
+ul.tweets-list {
+  list-style-type: none;
+}
+
+ul li {
+  color: white;
+}
 
 
 

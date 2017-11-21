@@ -1,22 +1,45 @@
 $(document).ready(function(){
+  
+  function generateTweets(data) {
+    var html = '';
+    //response objects
+    var tweets = data.statuses;
     
-    $('i').click(function() {
-      // save search input
-      var searchTerm = $('input').val();
-      
-      $.ajax({
-        type: 'GET',
-        url: "../php/index.php",
-        dataType: 'JSON',
-        data: {
-          searchTerm: searchTerm
-        },
-        success: function(data) {
-          console.log(data);
-        }
-      })
-      
-    })
+    html += '<ul class="tweets-list">';
+    //grab text in each tweet
+    for(var i = 0; i <tweets.length; i++) {
+      html += '<li>' + tweets[i].text + '</li>';
+    }
+    html+= '</ul>';
+    return html;
+  }
+  
+    
+  $('i').click(function() {
+    $('.input').hide();
+    
+    // save search arguments
+    var search = {
+      q: $('input').val(),
+      count: 3,
+      type: "popular"
+    }
+    
+    $.ajax({
+      url: "php/getTweets.php",
+      type: 'GET',
+      dataType: 'json',
+      data: {
+        q: search.q,
+        count: search.count,
+        result_type: search.type
+      },
+      success: function(data) {
+        $('.overlay').append(generateTweets(data));
+      }
+    }) //end ajax
+    
+  })  //end click 
 });
 
 
