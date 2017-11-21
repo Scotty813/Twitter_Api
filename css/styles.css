@@ -1,43 +1,48 @@
 * {
-    font-size: 20px;
-    color: #00aced;
+  font-size: 20px;
+  color: #00aced;
 }
 .overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(180deg, #00aced, #57e5af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #00aced, #57e5af);
 }
 
-.input {
-    position: relative;
-    width: 70%;
+.input {              /* Input container */
+  position: relative;
+  width: 70%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  font-size: 400%;
+  transition: width .4s, transform .4s,  height .4s;
 }
 
-input {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    height: 120px;
-    width: 100%;
-    font-size: 400%;
-    padding-left: 20px;
-    text-transform: uppercase;
-    border-radius: 20px;
-    border: none;
+input {             /* Input tag */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 i {
-    position: absolute;
-    right: 40px;
-    bottom: -10px;
-    font-size: 460%;
-    color: #9a9a9a;
-    cursor: pointer;
+  position: absolute;
+  right: 40px;
+  bottom: -10px;
+  font-size: 110%;
+  color: #9a9a9a;
+  cursor: pointer;
+  transition: right .4s, bottom .4s;
 }
 
 ul.tweets-list {
@@ -47,6 +52,24 @@ ul.tweets-list {
 ul li {
   color: white;
 }
+
+/* -------------------------------
+INPUT TRANSITIONS
+---------------------------------*/
+
+.input-transition {    /* transitions input container */
+  width: 25%;
+  transform: translateY(-250px);
+  font-size: 100%;
+  height: 40px;
+}
+
+.i-transition {
+  right: 25px;
+  bottom: 2px;
+}
+
+
 
 
 

@@ -14,9 +14,9 @@ $(document).ready(function(){
     return html;
   }
   
-    
   $('i').click(function() {
-    $('.input').hide();
+    $('.input').addClass('input-transition');
+    $('i').addClass('i-transition');
     
     // save search arguments
     var search = {
