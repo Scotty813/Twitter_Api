@@ -1,8 +1,5 @@
 <?php 
 
-//Store search input
-// $searchTerm = $_GET['searchTerm'];
-
 //retrieve data
 $q = $_GET['q'];
 $count = $_GET['count'];
@@ -23,7 +20,6 @@ $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $
 $content = $connection->get("account/verify_credentials");
 
 //Get Tweets 
-// $statuses = $connection->get("search/tweets", [q => "Bill Gates", "count" => 3, "result_type" => "popular"]);
 $statuses = $connection->get("search/tweets", [q => $q, "count" => $count, "result_type" => $result_type]);
 
 // output as JSON
