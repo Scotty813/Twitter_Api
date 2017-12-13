@@ -16,6 +16,31 @@
       <div class="input">
         <input type="text" placeholder="search" name="searchTerm"><i class="ion-ios-search-strong" href="php/getTweets.php"></i>
       </div>
+      
+      <div class="tweets-container">
+        <div class="box box1">
+          <div class="header">
+            <img src="http://pbs.twimg.com/profile_images/934932029325660161/M1gaXoia_normal.jpg">
+            <div class="header-name">
+              <p><strong>Karim</strong></p><i class="ion-social-twitter"></i>
+              <p>@karimtbe</p>
+            </div>
+          </div>
+          <div class="content">
+            <p>Keaton out here gettin a $100k bag from GoFundMe and his mom a racist and this lil boy who got bullied and is wise beyond his years ain't even get a dollar or a tweet from y'all</p>
+          </div>
+        
+        </div> <!-- end box -->
+        
+        <div class="box box2">
+        
+        </div> <!-- end box -->
+        
+        <div class="box box3">
+        
+        </div> <!-- end box -->
+      </div> <!-- end tweets container -->
+      
     </div>
   
     <!-- jQuery first, then Bootstrap JS. -->

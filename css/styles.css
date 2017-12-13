@@ -1,4 +1,4 @@
-* {
+html, body {
   font-size: 20px;
   color: #00aced;
 }
@@ -13,11 +13,12 @@
 }
 
 .input {              /* Input container */
+  display: flex;
+  display: none;
   position: absolute;
   top: 40%;
   width: 70%;
   height: 120px;
-  display: flex;
   justify-content: center;
   font-size: 400%;
   transition: width .4s, height .4s, top .4s;
@@ -38,7 +39,7 @@ input:focus {
   outline: none;
 }
 
-i {
+.input i {
   position: absolute;
   right: 40px;
   bottom: -10px;
@@ -46,14 +47,6 @@ i {
   color: #9a9a9a;
   cursor: pointer;
   transition: right .4s, bottom .4s;
-}
-
-ul.tweets-list {
-  
-}
-
-ul li {
-  color: white;
 }
 
 /* -------------------------------
@@ -71,6 +64,73 @@ INPUT TRANSITIONS
   right: 25px;
   bottom: 2px;
 }
+
+/* -------------------------------
+TWEETS
+---------------------------------*/
+
+.tweets-container {
+  display: flex;
+  /*display: none;*/
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 90%;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.box {
+  height: 400px;
+  width: 30%;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header img { 
+  border-radius: 50%; 
+  margin-right: 10px;
+}
+
+.header-name { 
+  display: inline-block; 
+}
+
+.header-name p {
+  margin-bottom: 0;
+}
+
+.header-name p:first-child {
+  color: #14171a;
+  display: inline-block;
+}
+
+.header-name i {
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+.header-name p:last-child {
+  margin-top: -3px;
+  font-size: 75%;
+  color: #657786;
+}
+
+.content {
+  margin-top: 10px;
+  margin-left: 21px;
+  font-size: 90%;
+  border-left: 4px solid #DDE2E6;
+  padding-left: 10px;
+  color: #14171a;
+  
+}
+
+
 
 
 
