@@ -1,22 +1,8 @@
 $(document).ready(function(){
   
-  // function generateTweets(data) {
-  //   var html = '';
-  //   //response objects
-  //   var tweets = data.statuses;
-  //   
-  //   html += '<ul class="tweets-list">';
-  //   //grab text in each tweet
-  //   for(var i = 0; i <tweets.length; i++) {
-  //     html += '<li>' + tweets[i].text + '</li>';
-  //   }
-  //   html+= '</ul>';
-  //   return html;
-  // }
-  
   function getData(data) {
     var tweets = []; 
-    
+
     data.statuses.forEach(function(val) {
       tweets.push(val);
     })
@@ -24,11 +10,32 @@ $(document).ready(function(){
     return tweets;
   }
   
+  function createTweets(tweets) {
+    
+    $('.box').each(function(i, obj) {
+      var profileImage = tweets[i].user.profile_image_url;
+      var name = tweets[i].user.name;
+      var handle = tweets[i].user.screen_name;
+      var  message = tweets[i].text;
+      
+      $(this).find('.header img').attr('src', profileImage);
+      $(this).find('.name').text(name);
+      $(this).find('.handle').text('@' + handle);
+      $(this).find('.content').text(message);
+    });
+  }
+  
   
   $('i').click(function() {
     //animates input to top of screen
     $('.input').addClass('input-transition');
-    $('i').addClass('i-transition');
+    // $('input').val('');
+    $('.input i').css({
+      'bottom': '3px',
+      'right': '20px'
+    });
+    //fadeIn tweets
+    $('.tweets-container').css('height', '400px').addClass('tweets-animation');
     
     // save search arguments
     var search = {
@@ -47,9 +54,8 @@ $(document).ready(function(){
         result_type: search.type
       },
       success: function(data) {
-        console.log(data);
-        // $('.overlay').append(generateTweets(data));
-        console.log(getData(data));
+        $('input').val('');
+        createTweets(getData(data));
       }
     }) //end ajax
     

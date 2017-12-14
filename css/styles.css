@@ -1,6 +1,7 @@
+/* blue #00aced */
+
 html, body {
   font-size: 20px;
-  color: #00aced;
 }
 
 .overlay {
@@ -14,7 +15,7 @@ html, body {
 
 .input {              /* Input container */
   display: flex;
-  display: none;
+  /*display: none;*/
   position: absolute;
   top: 40%;
   width: 70%;
@@ -26,6 +27,7 @@ html, body {
 
 input {             /* Input tag */
   font-family: 'Raleway', sans-serif;
+  color: #00aced;
   font-weight: 900;
   height: 100%;
   width: 100%;
@@ -42,7 +44,7 @@ input:focus {
 .input i {
   position: absolute;
   right: 40px;
-  bottom: -10px;
+  bottom: -7px;
   font-size: 110%;
   color: #9a9a9a;
   cursor: pointer;
@@ -60,27 +62,26 @@ INPUT TRANSITIONS
   top: 7%;
 }
 
-.i-transition {
-  right: 25px;
-  bottom: 2px;
-}
-
 /* -------------------------------
 TWEETS
 ---------------------------------*/
 
 .tweets-container {
   display: flex;
-  /*display: none;*/
+  height: 0;
+  opacity: 0;
+  margin-top: 90px;
   justify-content: space-between;
   max-width: 1200px;
   width: 90%;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  transition: opacity .5s;
+  transition-delay: .2s;
 }
 
 .box {
-  height: 400px;
-  width: 30%;
+  /*height: 400px;*/
+  width: 31%;
   background: white;
   border-radius: 8px;
   padding: 20px;
@@ -112,6 +113,7 @@ TWEETS
 .header-name i {
   font-size: 17px;
   margin-left: 5px;
+  color: #00aced;
 }
 
 .header-name p:last-child {
@@ -125,13 +127,18 @@ TWEETS
   margin-left: 21px;
   font-size: 90%;
   border-left: 4px solid #DDE2E6;
-  padding-left: 10px;
+  padding-left: 15px;
   color: #14171a;
   
 }
 
+/* -------------------------------
+TWEETS ANIMATION
+---------------------------------*/
 
-
+.tweets-animation {
+  opacity: 1;
+}
 
 
 
