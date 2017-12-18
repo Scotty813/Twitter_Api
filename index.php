@@ -29,6 +29,10 @@
           <div class="content">
             <p></p>
           </div>
+          <div class="popularity">
+            <p><span class="retweets" style="font-weight: bold">10</span> Retweets</p>  
+            <p><span class="likes" style="font-weight: bold">19</span> Likes</p>
+          </div>
         </div> <!-- end box -->
         
         <div class="box box2">
@@ -42,6 +46,10 @@
           <div class="content">
             <p></p>
           </div>
+          <div class="popularity">
+            <p><span class="retweets" style="font-weight: bold">10</span> Retweets</p>  
+            <p><span class="likes" style="font-weight: bold">19</span> Likes</p>
+          </div>
         </div> <!-- end box -->
         
         <div class="box box3">
@@ -54,6 +62,10 @@
           </div>
           <div class="content">
             <p></p>
+          </div>
+          <div class="popularity">
+            <p><span class="retweets" style="font-weight: bold">10</span> Retweets</p>  
+            <p><span class="likes" style="font-weight: bold">19</span> Likes</p>
           </div>
         </div> <!-- end box -->
       </div> <!-- end tweets container -->

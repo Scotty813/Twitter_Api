@@ -6,7 +6,7 @@ $(document).ready(function(){
     data.statuses.forEach(function(val) {
       tweets.push(val);
     })
-    
+    console.log(tweets);
     return tweets;
   }
   
@@ -29,7 +29,6 @@ $(document).ready(function(){
   $('i').click(function() {
     //animates input to top of screen
     $('.input').addClass('input-transition');
-    // $('input').val('');
     $('.input i').css({
       'bottom': '3px',
       'right': '20px'
